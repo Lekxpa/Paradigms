@@ -15,13 +15,13 @@
 # 1 * 9 = 9
 
 START_NUM1 = 1
-MAX_NUM2 = 10
+MAX_NUM2 = 9
 
 
 def multiplication_table(START_NUM1, max_num1, MAX_NUM2):
 
     for i in range(START_NUM1, max_num1+1):
-        for j in range(START_NUM1, MAX_NUM2):
+        for j in range(START_NUM1, MAX_NUM2 + 1):
             for k in range(i, i + 1):
                 print(f'{k}  * {j:>2} = {j * k:>2}', end = ' '*3)
             print()
