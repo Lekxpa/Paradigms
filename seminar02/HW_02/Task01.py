@@ -15,8 +15,8 @@
 # 1 * 9 = 9
 
 START_NUM1 = 1
-max_num1 = int(input("Введите значение n: "))
 MAX_NUM2 = 10
+
 
 def multiplication_table(START_NUM1, max_num1, MAX_NUM2):
 
@@ -28,5 +28,5 @@ def multiplication_table(START_NUM1, max_num1, MAX_NUM2):
         print()
 
 
-# n = int(input("Введите значение n: "))
+max_num1 = int(input("Введите значение n: "))
 multiplication_table(START_NUM1, max_num1, MAX_NUM2)
