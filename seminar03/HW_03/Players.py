@@ -16,9 +16,9 @@ class Computer(Player):
         name == "Computer"
 
 
-    def get_step():
-        step = random.randint(1, 10)
-        return step
+    # def get_step():
+    #     step = random.randint(1, 9)
+    #     return step
 
 
 class Human_pl(Player):
@@ -27,9 +27,9 @@ class Human_pl(Player):
         super().__init__(player)
 
 
-    def get_step():
-        step = Play.input_XO()
-        return step
+    # def get_step():
+    #     # step = Play.input_XO()
+    #     return step
     
 
 class Play():
