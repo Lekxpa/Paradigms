@@ -1,3 +1,6 @@
+#  игра с компьютером
+
+
 import random
 
 class Player:
@@ -53,64 +56,6 @@ class Play():
             print('|', borders[i * 3], '|', borders[i * 3 + 1], '|', borders[i * 3 + 2], '|')
             print('-  ' * 5)
 
-    # def input_XO(sign):
-
-    
-
-    #     game_ch = False
-    #     while not game_ch:
-            
-    #         if  currentTurn == Computer.name:
-    #             # Computer.get_step()
-    #             step = random.randint(1, 10)
-    #             if (str(Play.borders[step-1]) not in 'XO'):
-    #                     Play.borders[step-1] = sign
-    #                     game_ch = True
-    #                     print(f'Компьютер сделал ход в ячейку: {step}')
-    #                     # if currentTurn == Human_pl.name:
-    #                     #     currentTurn = Computer.name
-    #                     # else:
-    #                     currentTurn = Human_pl.name
-    #                     print(f'Сейчас ход игрока - {currentTurn}')
-    #                     # break
-    #                     # continue
-    #             else:
-    #                 step = random.randint(1, 10)
-    #                 continue
-    #         else:
-    #             step = input(f'\n\033[3mУкажите номер ячейки, в которую хотите поставить {sign}? \033[0m')
-    #             try:
-    #                 step = int(step)
-    #             except:
-    #                 print('\nНеверно указано значение. Укажите номер ячейки (от 1 до 9)!\n')
-    #                 continue
-    #             if step >= 1 and step <= 9:
-    #                 if (str(Play.borders[step-1]) not in 'XO'):
-    #                     Play.borders[step-1] = sign
-    #                     game_ch = True
-    #                     # if currentTurn == Human_pl.name:
-    #                     currentTurn = Computer.name
-    #                     print(f'Сейчас ход игрока - {currentTurn}')
-    #                     # break
-    #                     # continue
-    #                     # else:
-    #                     #     currentTurn = Human_pl.name
-    #                 else:
-    #                     print('\nЭта ячейка занята!\n')
-    #             else:
-    #                 print('\nНеверно указано значение. Укажите номер свободной ячейки (от 1 до 9)!\n')
-    #                 continue
-
-    #         # if currentTurn == Human_pl.name:
-    #         #     currentTurn = Computer.name
-    #         #     # continue
-    #         #     # break
-    #         # else:
-    #         #     currentTurn = Human_pl.name
-    #         #     # continue
-    #         #     # break
-
-
 
     def win_ch(borders):
         winline = [[0,1,2],
@@ -151,15 +96,15 @@ class Play():
             
                 if  currentTurn == Computer.name:
                     sign = 'X'
-                    step = random.randint(1, 10)
+                    step = random.randint(1, 9)
                     if (str(Play.borders[step-1]) not in 'XO'):
                         Play.borders[step-1] = sign
                         game_ch = True
-                        print(f'Компьютер сделал ход в ячейку: {step}')
+                        print(f'Компьютер сделал ход в ячейку: {step}\n')
                         currentTurn = Human_pl.name
-                        print(f'Сейчас ход игрока - {currentTurn}')
+                        print(f'Сейчас ход игрока - {currentTurn}\n')
                     else:
-                        step = random.randint(1, 10)
+                        step = random.randint(1, 9)
                         # continue
                 else:
                     sign = 'O'
@@ -174,7 +119,7 @@ class Play():
                             Play.borders[step-1] = sign
                             game_ch = True
                             currentTurn = Computer.name
-                            print(f'Сейчас ход игрока - {currentTurn}')
+                            print(f'\nСейчас ход игрока - {currentTurn}')
                         else:
                             print('\nЭта ячейка занята!\n')
                     else:
@@ -187,7 +132,7 @@ class Play():
             if count > 4:
                 a = Play.win_ch(borders)
                 if a:
-                    print(f'\n\033[1m\033[4m\033[32m\033[3m{a} выиграл!\033[0m')
+                    print(f'\n\033[1m\033[4m\033[32m\033[3m{a} выиграл!\033[0m\n')
                     win = True
                     break
             if count == 9:
