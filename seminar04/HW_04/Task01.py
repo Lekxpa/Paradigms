@@ -29,5 +29,5 @@ def correlyac_Pirs(lst_x, lst_y):
 lst_1 = [1, 5, 3, 7, 2]
 lst_2 = [1, 2, 3, 4, 5]
 
-print(f'Корреляционный коэффициент Пирсона: {correlyac_Pirs(lst_1, lst_2)}')
+print(f'\nКорреляционный коэффициент Пирсона: {correlyac_Pirs(lst_1, lst_2)}\n')
 
